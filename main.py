@@ -74,10 +74,17 @@ btn_open.grid(row=5, column=1)
 btn_close = tk.Button(root, text=")", command=lambda: add_to_calculation(")"), width=5, font=("Arial, 14"))
 btn_close.grid(row=5, column=3)
 
+btn_eks = tk.Button(root, text="**", command=lambda: add_to_calculation("**"), width=5, font=("Arial, 14"))
+btn_eks.grid(row=6, column=1)
+btn_mod = tk.Button(root, text="%", command=lambda: add_to_calculation("%"), width=5, font=("Arial, 14"))
+btn_mod.grid(row=6, column=2)
+btn_floor = tk.Button(root, text="//", command=lambda: add_to_calculation("//"), width=5, font=("Arial, 14"))
+btn_floor.grid(row=6, column=3)
+
 btn_clear = tk.Button(root, text="AC", command=clear_field, width=11, font=("Arial, 14"))
-btn_clear.grid(row=6, column=3, columnspan=2)
-# btn_close = tk.Button(root, text=")", command=lambda: add_to_calculation(")"), width=5, font=("Arial, 14"))
-# btn_close.grid(row=5, column=3)
+btn_clear.grid(row=7, column=1, columnspan=2)
+btn_close = tk.Button(root, text="=", command=evaluate_calculation, width=11, font=("Arial, 14"))
+btn_close.grid(row=7, column=3, columnspan=2)
 root.mainloop()
 
 
